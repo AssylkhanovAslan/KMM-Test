@@ -22,7 +22,7 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
 
     fun loadBanners() {
         viewModelScope.launch {
-            val banners = homeRepository.getBaseResponse()
+            val banners = homeRepository.getBanners()
             _banners.emit(banners.data)
             println(Json.encodeToString(banners))
         }
