@@ -10,7 +10,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            credentials {
+                username "downloader"
+                password "6BvwBy&7N9HH"
+            }
+            url "http://127.0.0.1:5912/repository/android-ui/"
+            allowInsecureProtocol = true
+        }
     }
+
 }
 
 rootProject.name = "Seller"

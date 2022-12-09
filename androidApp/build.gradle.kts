@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -39,4 +40,23 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.2.1")
     implementation("androidx.compose.material:material:1.2.1")
     implementation("androidx.activity:activity-compose:1.5.1")
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.2.0")
+    implementation("io.coil-kt:coil-svg:2.2.0")
+    //Pager
+    implementation("com.google.accompanist:accompanist-pager:0.25.1")
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.25.1")
+
+    // Koin main features for Android
+    val koinAndroidVersion = "3.3.0"
+    implementation("io.insert-koin:koin-android:$koinAndroidVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinAndroidVersion")
+    // Java Compatibility
+    implementation("io.insert-koin:koin-android-compat:$koinAndroidVersion")
+    // Jetpack WorkManager
+    implementation("io.insert-koin:koin-androidx-workmanager:$koinAndroidVersion")
+    // Navigation Graph
+    implementation("io.insert-koin:koin-androidx-navigation:$koinAndroidVersion")
+
+    implementation("com.google.code.gson:gson:2.10")
 }
