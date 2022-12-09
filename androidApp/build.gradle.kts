@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-parcelize")
+    id("kotlinx-serialization")
 }
 
 android {
@@ -59,4 +60,5 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-navigation:$koinAndroidVersion")
 
     implementation("com.google.code.gson:gson:2.10")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }
